@@ -4,4 +4,6 @@ import javax.inject.Inject
 
 class InfoProvider @Inject constructor() {
     fun addInfoData(data: Int): Int = data + 1
+
+    fun subInfoData(data: Int): Int = data - 1
 }
