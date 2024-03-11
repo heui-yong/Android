@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">android_hilt_study</string>
+    <string name="str_info">=====%s info=====</string>
+    <string name="str_age">%d 살</string>
+    <string name="str_weight">%d kg</string>
+    <string name="str_height">%d cm</string>
 </resources>
