@@ -152,7 +152,7 @@ class PrePostProcessor {
         )
     }
 
-    fun test(result: Result): String {
+    fun resultText(result: Result): String {
         return if (::mClasses.isInitialized) {
             "%s %.2f".format(mClasses[result.classIndex], result.score)
         } else {

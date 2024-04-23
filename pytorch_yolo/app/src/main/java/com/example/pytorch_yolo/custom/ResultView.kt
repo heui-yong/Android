@@ -52,7 +52,7 @@ class ResultView(context: Context, attrs: AttributeSet?) : View(context, attrs) 
             }
 
             canvas.drawText(
-                prePostProcessor.test(result),
+                prePostProcessor.resultText(result),
                 (result.rect.left + textX).toFloat(), (result.rect.top + textY).toFloat(), paintText
             )
         }

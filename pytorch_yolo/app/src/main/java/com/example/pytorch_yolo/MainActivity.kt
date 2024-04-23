@@ -99,7 +99,7 @@ class MainActivity : BaseModuleActivity(), CoroutineScope by MainScope() {
             finish()
         }
 
-        binding.testButton.text = "Test Image 1/3"
+        binding.testButton.text = "Test Image 1/4"
 
         binding.testButton.setOnClickListener {
             binding.resultView.visibility = View.INVISIBLE
