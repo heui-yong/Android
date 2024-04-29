@@ -4,7 +4,6 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tensorflow_mnist.databinding.ActivityMainBinding
-import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     companion object {
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setDrawView() {
         binding.drawView.apply {
-            setStrokeWidth(40.0f)
+            setStrokeWidth(60.0f)
             setBackgroundColor(Color.BLACK)
             setColor(Color.WHITE)
         }
@@ -46,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             val bitmap = binding.drawView.getBitmap()
 
             val res = classifier.classify(bitmap)
-            val outStr = String.format(Locale.ENGLISH, "예측 숫자 : %d, \n 맞을 확률 : %.0f%%", res.first, res.second * 100.0f)
+            val outStr = String.format(resources.getString(R.string.tv_text), res.first, res.second * 100.0f)
             binding.textView.text = outStr
         }
     }
@@ -54,6 +53,7 @@ class MainActivity : AppCompatActivity() {
     private fun setBtnClear() {
         binding.btnClear.setOnClickListener {
             binding.drawView.clearCanvas()
+            binding.textView.text = ""
         }
     }
 }
