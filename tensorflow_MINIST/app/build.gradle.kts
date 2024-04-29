@@ -51,7 +51,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //tensorflow
     implementation("org.tensorflow:tensorflow-lite:2.5.0")
 
+    //AndroidDraw
     implementation("com.github.divyanshub024:AndroidDraw:v0.1")
 }
