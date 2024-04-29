@@ -1,9 +1,9 @@
-package com.example.tensorflow_minist
+package com.example.tensorflow_mnist
 
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tensorflow_minist.databinding.ActivityMainBinding
+import com.example.tensorflow_mnist.databinding.ActivityMainBinding
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {

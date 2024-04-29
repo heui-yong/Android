@@ -1,4 +1,4 @@
-package com.example.tensorflow_minist
+package com.example.tensorflow_mnist
 
 import org.junit.Test
 

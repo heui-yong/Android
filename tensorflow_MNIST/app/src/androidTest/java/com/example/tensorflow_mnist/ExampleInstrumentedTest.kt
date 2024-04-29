@@ -1,4 +1,4 @@
-package com.example.tensorflow_minist
+package com.example.tensorflow_mnist
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

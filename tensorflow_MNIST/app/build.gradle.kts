@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tensorflow_minist"
+    namespace = "com.example.tensorflow_mnist"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.tensorflow_minist"
+        applicationId = "com.example.tensorflow_mnist"
         minSdk = 29
         targetSdk = 34
         versionCode = 1

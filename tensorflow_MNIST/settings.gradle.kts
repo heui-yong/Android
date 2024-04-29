@@ -23,6 +23,6 @@ dependencyResolutionManagement {
 }
 
 
-rootProject.name = "tensorflow_MINIST"
+rootProject.name = "tensorflow_MNIST"
 include(":app")
  
