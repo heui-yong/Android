@@ -14,13 +14,15 @@ class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
-    private lateinit var classifier: Classifier
+
+    private val classifier: Classifier by lazy {
+        Classifier(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        classifier = Classifier(this)
         initView()
     }
 
