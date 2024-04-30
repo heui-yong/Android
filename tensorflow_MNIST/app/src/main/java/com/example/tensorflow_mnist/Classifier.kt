@@ -59,9 +59,8 @@ class Classifier(context: Context) {
     }
 
     //Bitmap 이미지를 TensorFlow Lite 모델의 입력 텐서 크기에 맞게 리사이징
-    private fun resizeBitmap(bitmap: Bitmap) : Bitmap {
-        return Bitmap.createScaledBitmap(bitmap, modelInputWidth, modelInputHeight, false)
-    }
+    private fun resizeBitmap(bitmap: Bitmap): Bitmap =
+        Bitmap.createScaledBitmap(bitmap, modelInputWidth, modelInputHeight, false)
 
     private fun convertBitmapToGrayByteBuffer(bitmap: Bitmap) : ByteBuffer {
         val byteBuffer = ByteBuffer.allocateDirect(bitmap.byteCount)
@@ -89,8 +88,7 @@ class Classifier(context: Context) {
         return byteBuffer
     }
 
-    private fun argmax(array: FloatArray) : Pair<Int, Float> {
-        val maxBy = array.withIndex().maxBy { it.value }
-        return Pair(maxBy.index, maxBy.value)
-    }
+    private fun argmax(array: FloatArray): Pair<Int, Float> =
+        array.withIndex().maxByOrNull { it.value }?.let { it.index to it.value }
+            ?: error("Array is empty")
 }
